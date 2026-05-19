@@ -1,0 +1,46 @@
+`Added`, `Fixed`, `Changed`, `Removed`
+4. Outputs or updates `CHANGELOG.md` in Keep a Changelog format
+5. If `CHANGELOG.md` already exists, prepends the new version entry
+
+## Categorization rules
+The script uses conventional commit prefixes and keyword matching:
+
+| Prefix / Keyword | Category |
+|-----------------|----------|
+| `feat:`, `add:`, `added:`, `new:` | Added |
+| `fix:`, `fixed:`, `bug:`, `hotfix:`, `patch:`, `resolve:` | Fixed |
+| `chore:`, `refactor:`, `perf:`, `style:`, `docs:`, `ci:`, `test:`, `build:`, `update:`, `change:`, `changed:`, `improve:`, `tweak:`, `modify:` | Changed |
+| `remove:`, `removed:`, `delete:`, `deleted:`, `drop:`, `deprecate:` | Removed |
+
+Unmatched commits go into `Changed` as a safe default.
+
+## Output format
+```markdown
+## [vX.Y.Z] - YYYY-MM-DD
+
+### Added
+- Feature description (#PR)
+
+### Fixed
+- Bug fix description (#PR)
+
+### Changed
+- Change description
+
+### Removed
+- Removed feature description
+```
+
+## Requirements
+- `git` installed
+- Run from within a git repository
+- Bash 4.0+
+
+## Usage
+```bash
+# From repo root:
+bash skills/generate-changelog/changelog.sh
+
+# Or via Claude Code:
+/generate-changelog
+```
